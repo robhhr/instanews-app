@@ -1,23 +1,23 @@
 html, body {
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: $background;
+    color: $font-color;
     box-sizing: border-box;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    font-size: $font-size + 6;
   }
    /* Header */
   .intro-webpage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 0;
-    height: 200px;
-  }
-  .intro-webpage img {
-    width: 120px;
-    height: 120px;
+    padding: ($measure + 20) 0 0 ($measure + 10);
+    height: $measure * 20;
+    img {
+      width: $measure * 10;
+      height: $measure * 10;
+    }
+    p {
+      padding: $measure 0;
+    }
   }
   /* Footer */
   footer {
