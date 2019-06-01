@@ -19,6 +19,11 @@ html, body {
       padding: $measure 0;
     }
   }
+  /* Body */
+  .news-content {
+    text-align: center;
+    padding: $measure;
+  }
   /* Footer */
   footer {
     text-align: center;
