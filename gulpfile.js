@@ -45,7 +45,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task("scripts", function() {
   return gulp
-    .src("./js/*.js") // What files do we want gulp to consume?
+    .src("./JS/*.js") // What files do we want gulp to consume?
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())

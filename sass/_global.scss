@@ -3,6 +3,7 @@ html, body {
     color: $font-color;
     box-sizing: border-box;
     font-size: $font-size + 6;
+    max-width: 100%;
   }
    /* Header */
   .intro-webpage {
@@ -23,6 +24,9 @@ html, body {
   .news-content {
     text-align: center;
     padding: $measure;
+    #image-content {
+      max-width: 100px;
+    }
   }
   /* Footer */
   footer {

@@ -1,7 +1,7 @@
 let newsContent = document.querySelector('.news-content');
-let newsSelector = document.querySelector('.dropdown-section');
-let newsImage = document.querySelector('.news-image');
-let newsHeader = document.querySelector('.news-header');
+    newsSelector = document.querySelector('.dropdown-section');
+    changeSection = document.querySelector('ul');
+
 const sections = [
     'Sections ...',
     'arts',
@@ -34,19 +34,26 @@ const sections = [
 
 for (let  i = 0; i < sections.length; i++) {
     var optns = '<option style="text-transform: capitalize">' + sections[i] + '</option>'
-    $('select').append(optns);
+    $('.dropdown-section').append(optns);
 }
 
 $('select').on('change', function() {
+    // $(textSection).innerText("");
     var selection = $('select').val();
     $.ajax({
         method: 'GET',
         url: `https://api.nytimes.com/svc/topstories/v2/${selection}.json?api-key=EXmhIZ7OAfwVNUeK9LJBZxGGg2UnGioA`,
     }).done(function(data) {
-        const { url } = data.results[0].multimedia[0];
-        newsImage.textContent = url;
-        // newsHeader.setAttribute = url;
-        const { title } = data.results[0];
-        newsHeader.textContent = title;
-    })
-})
+        let count = 0;
+        $(changeSection).html("");
+        for(let infoNews = 0; infoNews < data.results.length; infoNews++) {
+            let mainMultimedia = data.results[infoNews].multimedia[4].url;
+            let newsDescription = data.results[infoNews].title;
+            let newsItems = '<li><a id="image-content" href="' + data.results[infoNews].url +'"target="_blank"><img src="' + mainMultimedia + '"></a><p id="text-content">' + newsDescription + "</p></li>";
+            $(newsContent).append(newsItems);
+            if (count === 12) {
+                break;
+           }
+        };
+    });
+});
