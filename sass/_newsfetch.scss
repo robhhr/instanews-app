@@ -1,7 +1,11 @@
 /* Header */
-.change-intro-webpage {
+.intro-fetch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: $full-size / 4;
-    .change-nyt-logo {
+    .logo-fetch {
         width: $gMeasure * 5;
         height: $gMeasure * 5;
     }

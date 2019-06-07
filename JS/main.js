@@ -48,8 +48,8 @@ $('select').on('change', function() {
         dataType: "json",
         async: true,
     }).done(function(data) {
-        $(introWeb).toggleClass('change-intro-webpage');
-        $(logo).toggleClass('change-nyt-logo');
+        // $(introWeb).toggleClass('intro-fetch');
+        // $(logo).toggleClass('logo-fetch');
         let count = 0;
         $(changeSection).html("");
         for (let infoNews = 0; infoNews < data.results.length; infoNews++) {
@@ -58,7 +58,7 @@ $('select').on('change', function() {
                 let mainMultimedia = data.results[infoNews].multimedia[4].url;
                 let newsDescription = data.results[infoNews].title;
                 let newsItems = 
-                '<li><a href="' + data.results[infoNews].url +'"target="_blank"><div class="image-content" style="background-image: url(' + mainMultimedia + ')"><p class="text-content">' + newsDescription + "</p></div></a></li>";
+                '<li><a href="' + data.results[infoNews].url +'"target="_blank"><article style="background-image: url(' + mainMultimedia + ')"><p class="text-content">' + newsDescription + "</p></article></a></li>";
             $(newsContent).append(newsItems);
             $('.preload').hide();
     }
