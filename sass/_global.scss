@@ -1,4 +1,5 @@
 html, body {
+    font-family: 'Open Sans', sans-serif;
     background-color: $background;
     color: $font-color;
     box-sizing: border-box;
@@ -20,9 +21,10 @@ html, body {
     @include tablet {
       flex-direction: row;
     }
-    // @include desktop {
-    //   align-items: flex-start;
-    // }
+    @include desktop {
+      justify-content: flex-start;
+      padding-left: $gMeasure * 5;
+    }
     .nyt-logo {
       width: $gMeasure * 15;
       height: $gMeasure * 15;
@@ -31,9 +33,6 @@ html, body {
         height: $gMeasure * 10;
         padding: 0 ($gMeasure * 2) 0 0;
       }
-      // @include desktop {
-      //   align-self: flex-start;
-      // }
     }
     p {
       padding: $gMeasure 0;
@@ -66,6 +65,10 @@ section {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(4, 1fr);
     }
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 }
 
@@ -86,6 +89,10 @@ section {
           width: $image-width / 3;
           height: $image-height + 100;
         }
+        @include desktop {
+          width: $image-width / 4;
+          height: $image-height + 100;
+        }
         .text-content {
           height: $gMeasure * 3;
           background-color: rgba(0, 0, 0, 0.5);
@@ -98,7 +105,12 @@ section {
 
   /* Footer */
   footer {
+    color: $footer-color;
     text-align: center;
+    @include desktop {
+      text-align: left;
+      padding-left: $gMeasure * 5;
+    }
     p {
       padding: ($gMeasure * 2.5) 0;
     }
