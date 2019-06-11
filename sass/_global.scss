@@ -1,5 +1,7 @@
 html, body {
     font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
     background-color: $background;
     color: $font-color;
     box-sizing: border-box;
@@ -17,7 +19,10 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: $full-size - 15;
+    transition: all 0.5s 0.5s ease-in-out;
+    &.default-size {
+      height: $full-size - 15;
+    }
     @include tablet {
       flex-direction: row;
     }
@@ -26,8 +31,10 @@ html, body {
       padding-left: $gMeasure * 5;
     }
     .nyt-logo {
+      &.logo-size {
       width: $gMeasure * 15;
       height: $gMeasure * 15;
+      }
       @include tablet {
         width: $gMeasure * 10;
         height: $gMeasure * 10;
@@ -56,6 +63,7 @@ html, body {
   }
 
   /* Body */
+
 section {
   .news-content {
     display: grid;
@@ -91,10 +99,10 @@ section {
         }
         @include desktop {
           width: $image-width / 4;
-          height: $image-height + 100;
+          height: $image-height + 80;
         }
         .text-content {
-          height: $gMeasure * 3;
+          height: auto;
           background-color: rgba(0, 0, 0, 0.5);
           padding: ($gMeasure - 5) ($gMeasure / 3);
           line-height: ($gMeasure + 10);

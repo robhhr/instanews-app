@@ -1,12 +1,8 @@
 /* Header */
-.intro-fetch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: $full-size / 4;
-    .logo-fetch {
-        width: $gMeasure * 5;
-        height: $gMeasure * 5;
-    }
+.new-size {
+    height: $full-size - 60;
+}
+.new-logo {
+    width: $gMeasure * 10;
+    height: $gMeasure * 10;
 }

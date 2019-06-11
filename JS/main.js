@@ -1,8 +1,8 @@
 let newsContent = document.querySelector('.news-content');
 let newsSelector = document.querySelector('.dropdown-section');
 let changeSection = document.querySelector('ul');
-let introWeb = document.querySelector('.intro-webpage');
 let logo = document.querySelector('.nyt-logo');
+let intro = document.querySelector('#intro');
 
 const sections = [
     'Sections ...',
@@ -35,12 +35,17 @@ const sections = [
 ]
 
 for (let  i = 0; i < sections.length; i++) {
-    let optns = '<option style="text-transform: capitalize">' + sections[i] + '</option>'
-    $('.dropdown-section').append(optns);
+    let label = sections[i];
+    let optns = `<option value=${label}>` + label.substr(0, 1).toUpperCase() + label.substr(1) + `</option>`
+    $(newsSelector).append(optns);
 }
 
 $('select').on('change', function() {
     $('.preload').show();
+
+    $(intro).removeClass('default-size').addClass('new-size');
+    $(logo).removeClass('logo-size').addClass('new-logo');
+    
     let selection = $('select').val();
     $.ajax({
         method: 'GET',
@@ -48,15 +53,13 @@ $('select').on('change', function() {
         dataType: "json",
         async: true,
     }).done(function(data) {
-        // $(introWeb).toggleClass('intro-fetch');
-        // $(logo).toggleClass('logo-fetch');
         let count = 0;
         $(changeSection).html("");
         for (let infoNews = 0; infoNews < data.results.length; infoNews++) {
             if (data.results[infoNews].multimedia.length >= 5 && count < 12) {
                 count += 1;
                 let mainMultimedia = data.results[infoNews].multimedia[4].url;
-                let newsDescription = data.results[infoNews].title;
+                let newsDescription = data.results[0].abstract;
                 let newsItems = 
                 '<li><a href="' + data.results[infoNews].url +'"target="_blank"><article style="background-image: url(' + mainMultimedia + ')"><p class="text-content">' + newsDescription + "</p></article></a></li>";
             $(newsContent).append(newsItems);
