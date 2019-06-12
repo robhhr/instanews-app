@@ -1,8 +1,17 @@
 /* Header */
 .new-size {
-    height: $full-size - 60;
+    height: auto;
+    @include tablet {
+        height: auto;
+    }
 }
 .new-logo {
-    width: $gMeasure * 10;
-    height: $gMeasure * 10;
+    width: $gMeasure * 8;
+    height: $gMeasure * 8;
+    padding-top: $gMeasure + 5;
+    @include tablet {
+        width: $gMeasure;
+        height: $gMeasure;
+        padding: 15px 0;
+    }
 }

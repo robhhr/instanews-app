@@ -59,7 +59,7 @@ $('select').on('change', function() {
             if (data.results[infoNews].multimedia.length >= 5 && count < 12) {
                 count += 1;
                 let mainMultimedia = data.results[infoNews].multimedia[4].url;
-                let newsDescription = data.results[0].abstract;
+                let newsDescription = data.results[infoNews].abstract;
                 let newsItems = 
                 '<li><a href="' + data.results[infoNews].url +'"target="_blank"><article style="background-image: url(' + mainMultimedia + ')"><p class="text-content">' + newsDescription + "</p></article></a></li>";
             $(newsContent).append(newsItems);
