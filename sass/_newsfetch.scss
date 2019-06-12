@@ -1,17 +1,15 @@
 /* Header */
 .new-size {
-    height: auto;
+    height: $header-mobile;
     @include tablet {
-        height: auto;
+        height: $header-tablet;
+    }
+    @include desktop {
+        height: $header-desktop;
     }
 }
 .new-logo {
-    width: $gMeasure * 8;
-    height: $gMeasure * 8;
-    padding-top: $gMeasure + 5;
-    @include tablet {
-        width: $gMeasure;
-        height: $gMeasure;
-        padding: 15px 0;
-    }
+    width: $gMeasure * 7;
+    height: $gMeasure * 7;
+    padding: ($gMeasure + 5);
 }

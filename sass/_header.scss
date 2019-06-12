@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease-in-out 0;
+    transition: all 0.2s ease-in-out 0.2s;
     &.default-size {
       height: $full-size - 15;
     }
@@ -19,12 +19,16 @@
       &.logo-size {
       width: $gMeasure * 15;
       height: $gMeasure * 15;
-      }
       @include tablet {
-        width: $gMeasure * 8;
-        height: $gMeasure * 8;
+        width: $gMeasure * 14;
+        height: $gMeasure * 14;
         padding: 0 ($gMeasure * 2) 0 0;
       }
+      @include desktop {
+        width: $gMeasure * 15;
+        height: $gMeasure * 15;
+      }
+    }
     }
     p {
       padding: $gMeasure 0;
