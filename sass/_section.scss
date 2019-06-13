@@ -21,20 +21,20 @@
         text-decoration: none;
         color: $font-color;
         article {
-          display:flex;
+          display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          width: 100%;
+          width: $image-width;
           height: $image-height;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
           @include tablet {
-            width: $image-width / 3;
+            width: $image-width;
             height: $image-height + 100;
           }
           @include desktop {
-            width: $image-width / 4;
+            width: $image-width;
             height: $image-height + 80;
           }
           .text-content {
