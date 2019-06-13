@@ -47,8 +47,8 @@ The languages used were:
 
 1. Clone or download repository
 2. Run `npm install`
-2. Open index.html to view the project
-3. Feel free to visualize the coding behind the website by opening the CSS and JS files
+2. Run `gulp` to see the project live
+3. Feel free to visualize the coding behind the website by opening the HTML, CSS and JS files
 4. The website has 3 main size breakpoints:
 
   - Mobile
