@@ -1,3 +1,4 @@
+$(document).ready(function() {
 let newsContent = document.querySelector('.news-content');
 let newsSelector = document.querySelector('.dropdown-section');
 let changeSection = document.querySelector('ul');
@@ -67,3 +68,4 @@ $('select').on('change', function() {
     }
     }})
 })
+});
