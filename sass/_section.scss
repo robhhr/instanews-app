@@ -40,8 +40,8 @@
           .text-content {
             height: auto;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: ($gMeasure - 5) ($gMeasure / 3);
-            line-height: ($gMeasure + 10);
+            padding: ($global - 5) ($global / 3);
+            line-height: ($global + 10);
           }
         }
       }

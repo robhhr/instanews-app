@@ -8,8 +8,15 @@
         height: $header-desktop;
     }
 }
+
 .new-logo {
-    width: $gMeasure * 7;
-    height: $gMeasure * 7;
-    padding: ($gMeasure + 5);
+    width: $global * 7;
+    height: $global * 7;
+    padding: ($global + 5) 0 0 0;
+    @include tablet {
+        padding: 0 ($global * 3.5) 0 0;
+    }
+    @include desktop {
+        padding: 0 ($global * 3.5) 0 0;
+    }
 }

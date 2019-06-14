@@ -13,25 +13,25 @@
     }
     @include desktop {
       justify-content: flex-start;
-      padding-left: $gMeasure * 5;
+      padding-left: $global * 5;
     }
     .nyt-logo {
       &.logo-size {
-      width: $gMeasure * 15;
-      height: $gMeasure * 15;
+      width: $global * 15;
+      height: $global * 15;
       @include tablet {
-        width: $gMeasure * 14;
-        height: $gMeasure * 14;
-        padding: 0 ($gMeasure * 2) 0 0;
+        width: $global * 14;
+        height: $global * 14;
+        padding: 0 ($global * 2) 0 0;
       }
       @include desktop {
-        width: $gMeasure * 15;
-        height: $gMeasure * 15;
+        width: $global * 15;
+        height: $global * 15;
       }
     }
     }
     p {
-      padding: $gMeasure 0;
+      padding: $global 0;
     }
     .selector {
       text-align: center;
@@ -47,9 +47,9 @@
     .preload {
       display: none;
       align-self: center;
-      width: $gMeasure * 2.5;
-      height: $gMeasure * 2.5;
-      padding-top: $gMeasure;
+      width: $global * 2.5;
+      height: $global * 2.5;
+      padding-top: $global;
       @include tablet {
         align-self: center;
       }
