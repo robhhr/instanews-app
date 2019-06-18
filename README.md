@@ -25,6 +25,10 @@ The article section changes layout after every breakpoint making it suitable for
 
 ![Alt text](images/instanews-tablet.png?raw=true "tablet-version")
 
+<h4 style = "text-decoration:underline">Mobile Version</h4>
+
+![Alt text](images/instanews-mobile.png?raw=true "mobile-version")
+
 ### Technologies used
 
 The text processor used was:
