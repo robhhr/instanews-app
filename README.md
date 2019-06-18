@@ -11,7 +11,7 @@
 
 - Mobile (< 600px)
 - Tablet (> 600px)
-- Desktop (1240px)
+- Desktop (> 1240px)
 
 The article section changes layout after every breakpoint making it suitable for easy reading and navigation.</p>
 
@@ -20,6 +20,10 @@ The article section changes layout after every breakpoint making it suitable for
 <h4 style = "text-decoration:underline">Desktop Version</h4>
 
 ![Alt text](images/instanews-desktop.jpg?raw=true "desktop-version")
+
+<h4 style = "text-decoration:underline">Tablet Version</h4>
+
+![Alt text](images/instanews-tablet.png?raw=true "tablet-version")
 
 ### Technologies used
 
