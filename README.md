@@ -1,7 +1,3 @@
-<h3 align="center">
-  <img src="http://designedgecanada.com/wp-content/uploads/2018/03/b9e11f0d-e030-447e-808a-3d0f6ed64084-620x130.png" alt="RED Academy" width="200">
-</h3>
-
 ### Instanews App
 
 <p>The main purpose of the project was to create a news fetching website that gets data from NY Time's API Top Stories.</p>
