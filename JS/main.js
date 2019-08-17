@@ -1,9 +1,9 @@
 $(function() {
-let newsContent = document.querySelector('.news-content');
-let newsSelector = document.querySelector('.dropdown-section');
-let changeSection = document.querySelector('ul');
-let logo = document.querySelector('.nyt-logo');
-let intro = document.querySelector('#intro');
+let newsContent = $('.news-content');
+let newsSelector = $('.dropdown-section');
+let changeSection = $('ul');
+let logo = $('.nyt-logo');
+let intro = $('#intro');
 
 const sections = [
     'Sections ...',
