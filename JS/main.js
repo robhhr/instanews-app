@@ -1,9 +1,4 @@
 $(function() {
-let newsContent = $('.news-content');
-let newsSelector = $('.dropdown-section');
-let changeSection = $('ul');
-let logo = $('.nyt-logo');
-let intro = $('#intro');
 
 const sections = [
     'Sections ...',
@@ -38,14 +33,14 @@ const sections = [
 for (let  i = 0; i < sections.length; i++) {
     let label = sections[i];
     let optns = `<option value=${label}>` + label.substr(0, 1).toUpperCase() + label.substr(1) + `</option>`
-    $(newsSelector).append(optns);
+    $('.dropdown-section').append(optns);
 }
 
 $('select').on('change', function() {
     $('.preload').show();
 
-    $(intro).removeClass('default-size').addClass('new-size');
-    $(logo).removeClass('logo-size').addClass('new-logo');
+    $('#intro').removeClass('default-size').addClass('new-size');
+    $('.nyt-logo').removeClass('logo-size').addClass('new-logo');
     
     let selection = $('select').val();
     $.ajax({
@@ -55,7 +50,7 @@ $('select').on('change', function() {
         async: true,
     }).done(function(data) {
         let count = 0;
-        $(changeSection).html("");
+        $('ul').html("");
         for (let infoNews = 0; infoNews < data.results.length; infoNews++) {
             if (data.results[infoNews].multimedia.length >= 5 && count < 12) {
                 count += 1;
@@ -63,7 +58,7 @@ $('select').on('change', function() {
                 let newsDescription = data.results[infoNews].abstract;
                 let newsItems = 
                 '<li><a href="' + data.results[infoNews].url +'"target="_blank"><article style="background-image: url(' + mainMultimedia + ')"><p class="text-content">' + newsDescription + "</p></article></a></li>";
-            $(newsContent).append(newsItems);
+            $('.news-content').append(newsItems);
             $('.preload').hide();
     }
     }})
